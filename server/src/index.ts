@@ -1,3 +1,4 @@
+import { intentMiddleware } from "@alpic-ai/insights";
 import { McpServer } from "skybridge/server";
 import { z } from "zod";
 
@@ -25,7 +26,9 @@ const server = new McpServer(
     version: "0.0.1",
   },
   { capabilities: {} },
-).registerWidget(
+)
+  .mcpMiddleware(intentMiddleware())
+  .registerWidget(
   "magic-8-ball",
   {
     description: "Magic 8 Ball",
