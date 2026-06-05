@@ -21,7 +21,7 @@ const Answers = [
 
 const server = new McpServer(
   {
-    name: "alpic-openai-app",
+    name: "agnost-ai-test",
     version: "0.0.1",
   },
   { capabilities: {} },
